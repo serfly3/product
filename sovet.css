@@ -1,0 +1,174 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: "Press";
+    src: url(Font/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Pangolin";
+    src: url(Font/Pangolin-Regular.ttf);
+}
+
+.header {
+    background-color: rgb(26, 255, 0);
+    font-family: "Press", sans-serif;    
+}
+
+.header_title {
+    font-size: 50px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav a{
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+    transition: 0.2s;
+    font-size: 20px;
+}
+
+.nav {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.nav a:hover {
+    color: red;
+    font-size: 22px;
+}
+
+header {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    font-family: "Press", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+footer p {
+    padding-bottom: 10px;
+}
+
+.sovet {
+    font-family: "Pangolin", sans-serif;
+    background-color: rgb(105, 245, 84);
+    border-radius: 30px;
+    padding-left: 30px;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    transition: 0.4s;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.main {
+    background: linear-gradient(rgb(1, 162, 206) , rgb(128, 0, 90));
+}
+
+.sovet:hover {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-right: 45px;
+    background-color: white;
+}
+
+.title {
+    font-family: "Press", sans-serif;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.title:hover {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 767px) {
+    .header_title {
+        font-size: 8vw;
+        padding-left: 20px;
+    }
+    .nav  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 4vw;
+        padding-left: 20px;
+    }
+
+    .footer_title {
+        font-size: 17px;
+        padding-left: 20px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 4vw;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .title:hover {
+        background: black;
+        color: white;
+    }
+
+    .content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sovet {
+        background: white;
+    }
+
+    .sovet:hover {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+}    

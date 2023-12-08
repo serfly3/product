@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ИМТ</title>
+	<link rel="stylesheet" href="imt.css">
+</head>
+<body>
+	<header class="header">
+        <h1 class="header_title">Ожирение - болезнь 21 века</h1>
+        <div class="nav">
+            <a href="index.html">Введение</a>
+            <a href="static.html">Профилактика ожирения</a>
+            <U style="color: red;"><a href="imt.html" style=" color: red;">ИМТ</a></U>
+            <a href="sovet.html">Советы для похудения</a>
+        </div>
+    </header>
+	<main class="main">
+	<div class="content">
+		<div class="title_main">
+			<h1 class="name">Индекс Массы Тела (ИМТ)</h1>
+			<p>Индекс массы тела — величина, позволяющая оценить степень соответствия массы человека и его роста и тем самым, косвенно, оценить, является ли масса недостаточной, нормальной, избыточной (ожирение). Он важен для определения показаний для необходимости лечения, в том числе применения препаратов для лечения ожирения.</p>
+		</div>
+		<div class="cali">
+		<div class="cal">
+			<h1>Калькулятор ИМТ</h1>
+            <p>Рост (в см)</p>
+            <input type="text" id="height" />
+            <p>Вес (в кг)</p>
+            <input type="text" id="weight" />
+            <button id="btn">Расчитать</button>
+            <div id="result"></div>
+		</div>
+		<img src="photo/immt.png" class="img">
+		</div>
+		<div class="top">
+		<div class="piy">
+		<div class="id">
+			<h1>Почему важно поддерживать показатель в норме</h1>
+			<p>ИМТ — это индикатор соотношения роста и веса, использующийся во всем мире. Но важно не только знать, как вычистить индекс массы тела, но и как удержать его в пределах рекомендуемых цифр. Это необходимо для:</p>
+		    <p>
+				<li>профилактики развития большого количества заболеваний;</li>
+				<li>нормального развития физического и психического здоровья;</li>
+				<li>выбора оптимальной тактики лечения и диеты;</li>
+				<li>профилактики инвалидизации и преждевременной смерти;</li>
+				<li>хорошего самочувствия, повышения работоспособности и здорового сна;</li>
+				<li>полноценного функционирования иммунной системы;</li>
+				<li>поддержания гормонального баланса.</li>
+			</p>
+		</div>
+		</div>
+		</div>
+	</div>
+	</main>
+	<footer class="footer">
+        <h2 class="footer_title">Проект "Ожирение в подростковом возрасте"</h2>
+        <p>2023</p>
+    </footer>
+	<script>
+		window.onload = () => {
+	let button = document.querySelector("#btn");
+
+	button.addEventListener("click", calculateBMI);
+};
+
+function calculateBMI() {
+	
+	let height = parseInt(document
+			.querySelector("#height").value);
+
+	let weight = parseInt(document
+			.querySelector("#weight").value);
+
+	let result = document.querySelector("#result");
+
+
+	if (height === "" || isNaN(height)) 
+		result.innerHTML = "Ошибка";
+
+	else if (weight === "" || isNaN(weight)) 
+		result.innerHTML = "Ошибка";
+
+	else {
+
+		let bmi = (weight / ((height * height) 
+							/ 10000)).toFixed(2);
+
+		if (bmi < 18.6) result.innerHTML =
+			`Ваш ИМТ : <span>${bmi}</span>`;
+
+		else if (bmi >= 18.6 && bmi < 24.9) 
+			result.innerHTML = 
+				`Ваш ИМТ : <span>${bmi}</span>`;
+
+		else result.innerHTML =
+			`Ваш ИМТ : <span>${bmi}</span>`;
+	}
+}
+
+	</script>
+</body>
+</html>
